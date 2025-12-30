@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pc-stats-opc-ua-publisher"
+version = "0.1.0"
+description = "OPC UA publisher for CPU and RAM usage"
+readme = "README.md"
+authors = [{ name = "pc-stats" }]
+requires-python = ">=3.10"
+dependencies = [
+    "asyncua==1.1.3",
+    "psutil==6.0.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
